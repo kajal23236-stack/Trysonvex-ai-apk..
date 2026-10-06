@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #05070B;
+    color: #F3F4F6;
+    overflow-x: hidden;
+  }
+  code, pre, kbd {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Glassmorphism & Glow Effects */
+.sonvex-glass {
+  background: rgba(13, 17, 26, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sonvex-glass-hover:hover {
+  background: rgba(19, 26, 41, 0.85);
+  border-color: rgba(6, 182, 212, 0.25);
+}
+
+.sonvex-glow-cyan {
+  box-shadow: 0 0 35px -5px rgba(6, 182, 212, 0.2);
+}
+
+.sonvex-glow-purple {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.2);
+}
+
+.sonvex-border-glow {
+  position: relative;
+}
+.sonvex-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.4), rgba(147, 51, 234, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+

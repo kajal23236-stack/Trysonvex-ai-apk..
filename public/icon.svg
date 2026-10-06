@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04060A"/>
+      <stop offset="50%" stop-color="#070D18"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background with Safe Padding for Maskable Icons -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#cyanGrad)" stroke-width="3" stroke-opacity="0.3"/>
+
+  <!-- Glowing Neural Geometric Core -->
+  <g transform="translate(256, 256)" filter="url(#glow)">
+    <!-- Outer Shield / Hexagonal Aura -->
+    <path d="M 0 -150 L 130 -75 L 130 75 L 0 150 L -130 75 L -130 -75 Z" 
+          fill="none" stroke="url(#purpleGrad)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+    <!-- Inner S Shape / Unified Intelligence Topology -->
+    <path d="M 70 -90 C 85 -50, 40 -20, 0 0 C -40 20, -85 50, -70 90 C -55 130, 10 130, 60 100" 
+          fill="none" stroke="url(#cyanGrad)" stroke-width="26" stroke-linecap="round"/>
+    <path d="M -70 90 C -85 50, -40 20, 0 0 C 40 -20, 85 -50, 70 -90 C 55 -130, -10 -130, -60 -100" 
+          fill="none" stroke="url(#cyanGrad)" stroke-width="26" stroke-linecap="round"/>
+
+    <!-- Central Glowing Core Sparkle -->
+    <circle cx="0" cy="0" r="22" fill="#FFFFFF"/>
+    <circle cx="0" cy="0" r="14" fill="#06B6D4"/>
+    
+    <!-- Satellite Nodes -->
+    <circle cx="130" cy="-75" r="9" fill="#22D3EE"/>
+    <circle cx="-130" cy="75" r="9" fill="#A855F7"/>
+    <circle cx="0" cy="-150" r="9" fill="#3B82F6"/>
+    <circle cx="0" cy="150" r="9" fill="#22D3EE"/>
+  </g>
+</svg>
